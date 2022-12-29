@@ -7,8 +7,8 @@ import { DeathSystem } from './src/death';
 const PLUGIN_NAME = 'Athena Death System';
 
 PluginSystem.registerPlugin(PLUGIN_NAME, () => {
+    Athena.systems.default.death.disable();
     DeathSystem.init();
     DeathCommands.init();
-    Athena.systems.default.death.disable();
-    alt.log(`~lg~CORE ==> ${PLUGIN_NAME} was Loaded`);
+    alt.log(`~lg~Death Plugin was Loaded`);
 });
